@@ -1,0 +1,164 @@
+---
+---
+
+<!-- ═══════════════════════════════════════════════════════
+     EVENT SECTION
+     Layout: text left / image right (mirrors IntroSection)
+     Elements: 94ad2bd, 93fd81c, f9bec7f, a387f6b,
+               acb9e05, 5991b64
+═══════════════════════════════════════════════════════ -->
+<section class="event-section">
+  <div class="event-inner">
+
+    <!-- Left: heading + description -->
+    <div class="event-text">
+      <h2 class="event-title">Nettoyage événementiel – Ominta expert de la propreté</h2>
+
+      <div class="event-desc">
+        <p>
+          Chez Ominta, nous assurons un nettoyage événementiel complet, avant, pendant et après
+          vos événements, afin de garantir des espaces impeccables, sûrs et accueillants pour
+          vos invités.
+        </p>
+        <p>
+          Que vous organisiez une <strong>conférence</strong>,
+          <strong>un salon professionnel</strong>, un concert, un
+          <strong>lancement de produit</strong>, un <strong>mariage</strong>, une foire ou tout
+          autre type d'événement, nos équipes spécialisées interviennent avec efficacité et
+          discrétion. Nous adaptons nos prestations à la taille, au lieu et aux exigences de
+          votre événement : gestion des déchets, nettoyage des espaces communs, sanitaires,
+          zones VIP, stands, loges, coulisses ou extérieurs.
+        </p>
+        <p>
+          Grâce à nos solutions sur mesure et à notre réactivité, nous contribuons à la réussite
+          de votre événement tout en valorisant <strong>l'image de votre organisation</strong>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Right: event image -->
+    <div class="event-image">
+      <img
+        loading="lazy"
+        decoding="async"
+        width="1024"
+        height="1003"
+        src="https://www.ominta.ma/wp-content/uploads/2025/11/nettoyage-evenementiel-tanger-1024x1003.jpg"
+        alt="Nettoyage événementiel complet à Tanger"
+        srcset="https://www.ominta.ma/wp-content/uploads/2025/11/nettoyage-evenementiel-tanger-1024x1003.jpg 1024w,
+                https://www.ominta.ma/wp-content/uploads/2025/11/nettoyage-evenementiel-tanger-768x752.jpg 768w,
+                https://www.ominta.ma/wp-content/uploads/2025/11/nettoyage-evenementiel-tanger-300x294.jpg 300w,
+                https://www.ominta.ma/wp-content/uploads/2025/11/nettoyage-evenementiel-tanger-710x696.jpg 710w,
+                https://www.ominta.ma/wp-content/uploads/2025/11/nettoyage-evenementiel-tanger.jpg 1178w"
+        sizes="(max-width:1024px) 100vw, 1024px"
+      />
+    </div>
+
+  </div>
+</section>
+
+<style>
+  /* ── Outer section ────────────────────────────────────
+     94ad2bd: row layout, same padding as IntroSection
+  ─────────────────────────────────────────────────── */
+  .event-section {
+    background-color: #ffffff;
+    overflow: visible;
+  }
+
+  /* Centered 1200px grid; padding:120px top */
+  .event-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 120px 10px 120px;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 60px;
+    flex-wrap: wrap;
+  }
+
+  /* ── Left: text (93fd81c / f9bec7f / a387f6b) ──────── */
+  .event-text {
+    flex: 1 1 0;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    margin-right: 50px;
+  }
+
+  /* Heading: color:#000; 50px; weight:700 */
+  .event-title {
+    color: #000000;
+    font-family: "Poppins", sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin: 0;
+  }
+
+  /* Description paragraphs: color:#4B4848; size:16px */
+  .event-desc p {
+    color: #4B4848;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    margin: 0 0 14px 0;
+  }
+
+  .event-desc p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* ── Right: image (acb9e05 / 5991b64) ──────────────── */
+  .event-image {
+    flex: 1 1 0;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .event-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    pointer-events: all;
+  }
+
+  /* ── Tablet ≤ 1024px ───────────────────────────────── */
+  @media (max-width: 1024px) {
+    .event-inner {
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .event-text {
+      margin-right: 0;
+    }
+
+    .event-title {
+      text-align: center;
+    }
+  }
+
+  /* ── Mobile ≤ 767px ────────────────────────────────── */
+  @media (max-width: 767px) {
+    .event-inner {
+      padding: 60px 25px 60px;
+      gap: 20px;
+    }
+
+    .event-text {
+      margin-right: 0;
+    }
+
+    .event-title {
+      font-size: 57px;
+      line-height: 0.9;
+      text-align: left;
+    }
+  }
+</style>

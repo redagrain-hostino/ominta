@@ -1,0 +1,395 @@
+---
+---
+
+<section class="hero">
+  <div class="hero-inner">
+
+  <!-- Left column: text + reviews + CTA -->
+  <div class="hero-left">
+    <div class="hero-content">
+
+      <h1 class="hero-title">Société de Nettoyage Tanger</h1>
+
+      <p class="hero-desc">
+        Ominta, votre société de nettoyage Tanger, proche de vous pour les services
+        <strong>à domicile</strong> (maisons, villas, appartements) et pour les
+        <strong>entreprises</strong> (bureaux, showrooms, usines, chantiers…).
+      </p>
+
+      <div class="hero-reviews">
+        <img
+          decoding="async"
+          width="1024"
+          height="229"
+          src="https://www.ominta.ma/wp-content/uploads/2025/08/avis-nettoyage-tanger-e1755459834916-1024x229.png"
+          alt="Avis Ominta Société de nettoyage à Tanger"
+          srcset="https://www.ominta.ma/wp-content/uploads/2025/08/avis-nettoyage-tanger-e1755459834916-1024x229.png 1024w,
+                  https://www.ominta.ma/wp-content/uploads/2025/08/avis-nettoyage-tanger-e1755459834916-768x171.png 768w,
+                  https://www.ominta.ma/wp-content/uploads/2025/08/avis-nettoyage-tanger-e1755459834916-300x67.png 300w"
+          sizes="(max-width:1024px) 100vw, 1024px"
+        />
+      </div>
+
+      <div class="hero-cta">
+        <a href="/contact" class="hero-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 512 512" fill="currentColor" aria-hidden="true">
+            <path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"/>
+          </svg>
+          <span>Réserver maintenant</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Right column: background image + callback form -->
+  <div class="hero-right">
+    <div class="hero-form-wrapper">
+      <div class="hero-form-card"> 	
+
+        <p class="form-label-top">RAPPEL GRATUIT ET IMMÉDIAT</p>
+        <p class="form-sublabel">Un conseiller vous appellera dans quelques instants.</p>
+
+        <form class="callback-form" action="#" method="post" novalidate>
+          <input
+            id="hero-name"
+            type="text"
+            name="your-name"
+            placeholder="Nom complet *"
+            autocomplete="name"
+            required
+            maxlength="400"
+          />
+          <input
+            id="hero-phone"
+            type="tel"
+            name="phone-number"
+            placeholder="Téléphone *"
+            autocomplete="tel"
+            required
+            maxlength="400"
+          />
+          <button type="submit" class="form-submit">Envoyer</button>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+  </div><!-- /.hero-inner -->
+</section>
+
+<style>
+  /* ═══════════════════════════════════════════════════
+     HERO SECTION
+  ═══════════════════════════════════════════════════ */
+
+  /* Full-width outer shell — columns stretch edge-to-edge */
+  .hero {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+  }
+
+  /*
+   * Full-bleed background image on the right half of the viewport.
+   * The ::after covers from the 50% mark to the far right edge,
+   * regardless of the 1200px container width.
+   */
+  .hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background-image: url("https://www.ominta.ma/wp-content/uploads/2025/08/societe-de-nettoyage-tanger.jpg");
+    background-position: center left;
+    background-size: cover;
+    z-index: 0;
+  }
+
+  /*
+   * Centered 1200px grid — same as .header-inner
+   * Both columns live inside this, so their content
+   * aligns perfectly with the header.
+   */
+  .hero-inner {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1; /* sit above the ::after background */
+  }
+
+  /* ── LEFT: text column ───────────────────────────── */
+  .hero-left {
+    flex: 0 0 50%;
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .hero-content {
+    max-width: 610px;
+    padding: 140px 50px 130px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .hero-title {
+    color: #000000;
+    font-family: "Poppins", sans-serif;
+    font-size: 60px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin: 0 0 20px 0;
+	letter-spacing: -0.027em;
+  }
+
+  .hero-desc {
+    color: #4B4848;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0 0 24px 0;
+  }
+
+  .hero-reviews {
+    text-align: left;
+    margin-bottom: 30px;
+  }
+
+  .hero-reviews img {
+    width: 48%;
+    height: auto;
+    filter: brightness(96%) contrast(112%) saturate(100%);
+    pointer-events: none;
+  }
+
+  /* CTA row */
+  .hero-cta {
+    display: flex;
+    gap: 42px;
+    margin-top: 30px;
+  }
+
+  .hero-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-image: linear-gradient(85deg, #50A144 35%, #28751D 100%);
+    color: #ffffff;
+    padding: 17px 50px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: opacity 0.2s ease;
+  }
+
+  .hero-btn:hover {
+    opacity: 0.88;
+    color: #ffffff;
+  }
+
+  .hero-btn svg {
+    flex-shrink: 0;
+    font-size: 13px;
+  }
+
+  /* ── RIGHT: form column (background handled by .hero::after) ── */
+  .hero-right {
+    flex: 0 0 43%;
+    width: 43%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 0 80px 80px;
+    /* No background here — the full-bleed image is on .hero::after */
+  }
+
+  .hero-form-wrapper {
+    max-width: 540px;
+    width: 100%;
+  }
+
+  .hero-form-card {
+    background-image: linear-gradient(109deg, #50A144 41%, #23511D 98%);
+    border-radius: 4px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .form-label-top {
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0 0 -15px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+
+  .form-sublabel {
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+    font-size: 17px;
+    margin: 0 0 8px 0;
+  }
+
+  /* Form fields */
+  .callback-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .callback-form input {
+    background-color: #ffffff;
+    border: none;
+    outline: none;
+    padding: 12px 14px;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.9rem;
+    color: #333;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .callback-form input::placeholder {
+    color: #888;
+  }
+
+  .form-submit {
+    background-color: #E4F1ED;
+    border: none;
+    color: #333;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    padding: 18px 0;
+    width: 100%;
+    cursor: pointer;
+    margin-top: 4px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  .form-submit:hover {
+    background-color: #1F880F;
+    color: #ffffff;
+  }
+
+  /* ═══════════════════════════════════════════════════
+     RESPONSIVE – tablet ≤ 1024px
+  ═══════════════════════════════════════════════════ */
+  @media (max-width: 1024px) {
+    .hero-inner {
+      flex-direction: column;
+    }
+
+    .hero-left,
+    .hero-right {
+      flex: none;
+      width: 100%;
+    }
+
+    .hero-left {
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+    .hero-content {
+      max-width: 100%;
+      padding: 90px 10px;
+    }
+
+    .hero-reviews {
+      text-align: center;
+    }
+
+    .hero-cta {
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-right {
+      padding: 10px;
+    }
+
+    .hero-form-wrapper {
+      max-width: 100%;
+      padding: 0 10px;
+    }
+
+    .hero-form-card {
+      padding: 50px 20px;
+      gap: 5px;
+    }
+
+    .form-label-top {
+      font-size: 28px;
+    }
+
+    .form-sublabel {
+      font-size: 15px;
+    }
+  }
+
+  /* ═══════════════════════════════════════════════════
+     RESPONSIVE – mobile ≤ 767px
+  ═══════════════════════════════════════════════════ */
+  @media (max-width: 767px) {
+    .hero-content {
+      padding: 40px 25px;
+    }
+
+    .hero-title {
+      font-size: 51px;
+      line-height: 1.1;
+    }
+
+    .hero-reviews img {
+      width: 77%;
+    }
+
+    .hero-cta {
+      gap: 30px;
+    }
+
+    .hero-right {
+      min-height: 350px;
+      padding: 10px;
+    }
+
+    .hero-form-card {
+      padding: 50px 20px;
+      gap: 5px;
+    }
+
+    .form-label-top {
+      font-size: 23px;
+      line-height: 1.5;
+    }
+  }
+
+  /* desktop ≥ 768px width overrides */
+  @media (min-width: 768px) {
+    .hero-reviews img {
+      width: 48%;
+    }
+  }
+</style>
