@@ -1,7 +1,12 @@
 ---
+export interface Props {
+  background?: string;
+}
+
+const { background = "linear-gradient(126deg, #50A144 48%, #205219 100%)" } = Astro.props;
 ---
 
-<div class="partners-banner">
+<div class="partners-banner" style={`background-image: ${background};`}>
   <img
     decoding="async"
     width="1024"
@@ -25,11 +30,10 @@
     flex-direction: column;
     align-items: center;
     padding: 20px 0;
-    background-image: linear-gradient(126deg, #50A144 48%, #205219 100%);
   }
 
   .partners-banner img {
-    width: 45%;
+    width: 30%;
     height: auto;
     pointer-events: none;
   }

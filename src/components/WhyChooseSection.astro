@@ -1,4 +1,9 @@
 ---
+export interface Props {
+  imageSrc?: string;
+}
+
+const { imageSrc = "https://www.ominta.ma/wp-content/uploads/2025/08/nettoyage-tanger.jpg" } = Astro.props;
 ---
 
 <!-- ═══════════════════════════════════════════════════════
@@ -9,8 +14,8 @@
 <section class="why-choose-section">
 
   <!-- ── Left: Full-bleed image background ─────────── -->
-  <div class="why-choose-image">
-    <!-- Image applied via CSS background -->
+  <div class="why-choose-image" style={`background-image: url('${imageSrc}');`}>
+    <!-- Image applied via inline CSS background -->
   </div>
 
   <!-- ── Right: Green gradient with content ────────── -->
@@ -71,7 +76,6 @@
     flex: 1 1 0;
     min-width: 0;
     background-color: #244237;
-    background-image: url("https://www.ominta.ma/wp-content/uploads/2025/08/nettoyage-tanger.jpg");
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;

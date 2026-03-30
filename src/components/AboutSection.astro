@@ -1,79 +1,55 @@
 ---
-
+interface Props {
+  title?: string;
+  paragraphs?: { html: string }[];
+  mapSrc?: string;
+}
+ 
+const {
+  title = "Ominta, la meilleure société de nettoyage à Tanger",
+  paragraphs = [
+    {
+      html: `Ominta, la meilleure société de nettoyage à Tanger (<span><a href="/cleaning-company-tangier/">Cleaning Company Tangier</a></span>), met à votre service son expertise et son professionnalisme pour répondre à tous vos besoins en matière d'entretien et d'hygiène.`,
+    },
+    {
+      html: `Basée à 📍 N17, Étage 05, IMM Al Fath Bloc A, Avenue Moulay Youssef, Tanger, Morocco, notre société accompagne aussi bien les particuliers que les entreprises de tous secteurs et de toutes tailles, en proposant des prestations adaptées à chaque environnement.`,
+    },
+    {
+      html: `Nous intervenons auprès de nombreuses sociétés automobiles installées dans la zone TAC et dans la Tanger Free Zone (TFZ), en assurant un nettoyage régulier et minutieux des bureaux, ateliers et espaces communs. Ces entreprises nous font confiance pour maintenir des conditions de propreté optimales, essentielles au confort des employés et à l'image professionnelle qu'elles souhaitent refléter.`,
+    },
+    {
+      html: `Notre savoir-faire s'étend également au nettoyage résidentiel. À Malabata, par exemple, nous assurons <strong>l'entretien complet d'une résidence de haut standing</strong>, allant du ménage quotidien des appartements aux interventions plus spécifiques comme le lavage des vitres et l'entretien des sols. Nous veillons à offrir un cadre de vie agréable et parfaitement entretenu à chaque occupant.`,
+    },
+    {
+      html: `Ominta est aussi un partenaire de confiance pour le secteur de la construction. Nous avons réalisé le nettoyage complet d'un chantier situé à proximité du <span><a href="https://fr.wikipedia.org/wiki/Stade_Ibn-Batouta" target="_blank" rel="noopener"><strong>Stade Ibn-Batouta</strong></a></span>, en prenant en charge le dépoussiérage, l'évacuation des gravats et la remise en état des lieux. Notre équipe spécialisée dans le nettoyage de fin de chantier garantit un résultat impeccable avant la livraison des travaux.`,
+    },
+    {
+      html: `Enfin, de nombreuses familles nous sollicitent pour l'entretien de leurs habitats à Tanger et ses alentours. Qu'il s'agisse d'appartements, de maisons, de villas ou même de garages, nous proposons des solutions personnalisées qui incluent le ménage complet, le nettoyage des terrasses, des vitres et des espaces extérieurs. Avec Ominta, chaque espace est traité avec soin et professionnalisme, reflétant notre engagement à offrir un service de qualité supérieure.`,
+    },
+  ],
+  mapSrc = "https://maps.google.com/maps?width=100%25&height=100%25&hl=en&q=35.77067665248922,%20-5.810104635580955&t=&z=14&ie=UTF8&iwloc=B&output=embed",
+} = Astro.props;
 ---
 
 <section class="about-section">
   <div class="about-inner">
     <div class="about-content">
       <h2 class="about-title">
-        Ominta, la meilleure société de nettoyage à Tanger
+        {title} 
       </h2>
 
       <div class="about-desc">
-        <p>
-          Ominta, la meilleure société de nettoyage à Tanger (<span
-            ><a href="/cleaning-company-tangier/">Cleaning Company Tangier</a
-            ></span
-          >), met à votre service son expertise et son professionnalisme pour
-          répondre à tous vos besoins en matière d'entretien et d'hygiène.
-        </p>
-        <p>
-          Basée à 📍 N17, Étage 05, IMM Al Fath Bloc A, Avenue Moulay Youssef,
-          Tanger, Morocco, notre société accompagne aussi bien les particuliers
-          que les entreprises de tous secteurs et de toutes tailles, en
-          proposant des prestations adaptées à chaque environnement.
-        </p>
-        <p>
-          Nous intervenons auprès de nombreuses sociétés automobiles installées
-          dans la zone TAC et dans la Tanger Free Zone (TFZ), en assurant un
-          nettoyage régulier et minutieux des bureaux, ateliers et espaces
-          communs. Ces entreprises nous font confiance pour maintenir des
-          conditions de propreté optimales, essentielles au confort des employés
-          et à l'image professionnelle qu'elles souhaitent refléter.
-        </p>
-        <p>
-          Notre savoir-faire s'étend également au nettoyage résidentiel. À
-          Malabata, par exemple, nous assurons <strong
-            >l'entretien complet d'une résidence de haut standing</strong
-          >, allant du ménage quotidien des appartements aux interventions plus
-          spécifiques comme le lavage des vitres et l'entretien des sols. Nous
-          veillons à offrir un cadre de vie agréable et parfaitement entretenu à
-          chaque occupant.
-        </p>
-        <p>
-          Ominta est aussi un partenaire de confiance pour le secteur de la
-          construction. Nous avons réalisé le nettoyage complet d'un chantier
-          situé à proximité du
-          <span
-            ><a
-              href="https://fr.wikipedia.org/wiki/Stade_Ibn-Batouta"
-              target="_blank"
-              rel="noopener"><strong>Stade Ibn-Batouta</strong></a
-            ></span
-          >, en prenant en charge le dépoussiérage, l'évacuation des gravats et
-          la remise en état des lieux. Notre équipe spécialisée dans le
-          nettoyage de fin de chantier garantit un résultat impeccable avant la
-          livraison des travaux.
-        </p>
-        <p>
-          Enfin, de nombreuses familles nous sollicitent pour l'entretien de
-          leurs habitats à Tanger et ses alentours. Qu'il s'agisse
-          d'appartements, de maisons, de villas ou même de garages, nous
-          proposons des solutions personnalisées qui incluent le ménage complet,
-          le nettoyage des terrasses, des vitres et des espaces extérieurs. Avec
-          Ominta, chaque espace est traité avec soin et professionnalisme,
-          reflétant notre engagement à offrir un service de qualité supérieure.
-        </p>
+        {paragraphs.map((p) => <p set:html={p.html} />)}
 
-        <div class="about-map">
+        {mapSrc && <div class="about-map">
           <iframe
             loading="lazy"
-            src="https://maps.google.com/maps?width=100%25&height=100%25&hl=en&q=35.77067665248922,%20-5.810104635580955&t=&z=14&ie=UTF8&iwloc=B&output=embed"
+            src={mapSrc}
             width="100%"
             height="300"
             frameborder="0"
             scrolling="no"></iframe>
-        </div>
+        </div>}
       </div>
     </div>
   </div>
@@ -112,7 +88,7 @@
  
   /* ── Description ────────────────────────────────────── */
   .about-desc p {
-    color: #4b4848;
+    color: #4b4848 !important;
     font-family: "Poppins", sans-serif;
     font-size: 16px;
     line-height: 1.7;
@@ -120,14 +96,14 @@
     max-width: 100%;
   }
 
-  .about-desc a {
-    color: inherit;
+  .about-desc p :global(a) { 
+    color: #4b4848 !important;
     text-decoration: underline;
     text-underline-offset: 3px;
-  }
+  } 
 
-  .about-desc a:hover {
-    color: #50a144;
+  .about-desc p :global(a:hover) {
+    color: #50a144 !important;
   }
 
   /* ── Google Map Iframe ──────────────────────────────── */

@@ -1,0 +1,920 @@
+---
+import Layout from "../layouts/Layout.astro";
+import WhyChooseSection from "../components/WhyChooseSection.astro";
+import AboutSection from "../components/AboutSection.astro";
+import FAQSection from "../components/FAQSection.astro";
+import TestimonialsSection from "../components/TestimonialsSection.astro";
+import PartnersBanner from "../components/PartnersBanner.astro";
+---
+
+<Layout title="Ominta Commercial | Service de nettoyage entreprise à Tanger">
+
+<section class="com-hero">
+  <div class="com-hero-inner">
+
+    <!-- Left column: logo + text + reviews + CTA -->
+    <div class="com-hero-left">
+      <div class="com-hero-content"> 
+
+        <!-- Ominta Commercial Logo -->
+        <div class="com-logo">
+          <img
+            decoding="async"
+            width="500"
+            height="143"
+            src="/images/ominta-commercial.jpg"
+            alt="logo ominta commercial"
+          />
+        </div>
+
+        <h1 class="com-hero-title">Nettoyage commercial, professionnel et industriel</h1>
+
+        <p class="com-hero-desc">
+          Chez Ominta Commercial Tanger, nous créons des espaces de travail propres, sûrs et hygiéniques.
+          <strong>Bureaux</strong>, <strong>magasins</strong>, <strong>entrepôts</strong>, <strong>usines</strong>,
+          établissements touristiques ou événements — nos services assurent la propreté de vos sites et valorisent
+          l'image de votre entreprise.
+        </p>
+
+        <div class="com-hero-reviews">
+          <img
+            decoding="async"
+            width="1024"
+            height="229"
+            src="https://www.ominta.ma/wp-content/uploads/2025/08/avis-nettoyage-tanger-e1755459834916-1024x229.png"
+            alt="Avis Ominta Société de nettoyage à Tanger"
+            srcset="https://www.ominta.ma/wp-content/uploads/2025/08/avis-nettoyage-tanger-e1755459834916-1024x229.png 1024w,
+                    https://www.ominta.ma/wp-content/uploads/2025/08/avis-nettoyage-tanger-e1755459834916-768x171.png 768w,
+                    https://www.ominta.ma/wp-content/uploads/2025/08/avis-nettoyage-tanger-e1755459834916-300x67.png 300w"
+            sizes="(max-width:1024px) 100vw, 1024px"
+          />
+        </div>
+
+        <div class="com-hero-cta">
+          <a href="/contact" class="com-hero-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 512 512" fill="currentColor" aria-hidden="true">
+              <path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"/>
+            </svg>
+            <span>Réserver maintenant</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Right column: background image + callback form -->
+    <div class="com-hero-right">
+      <div class="com-hero-form-wrapper">
+        <div class="com-hero-form-card">
+
+          <p class="com-form-label-top">RAPPEL GRATUIT ET IMMÉDIAT</p>
+          <p class="com-form-sublabel">Un conseiller vous appellera dans quelques instants.</p>
+
+          <form class="com-callback-form" action="#" method="post" novalidate>
+            <input
+              id="com-hero-name"
+              type="text"
+              name="your-name"
+              placeholder="Nom complet *"
+              autocomplete="name"
+              required
+              maxlength="400"
+            />
+            <input
+              id="com-hero-phone"
+              type="tel"
+              name="phone-number"
+              placeholder="Téléphone *"
+              autocomplete="tel"
+              required
+              maxlength="400"
+            />
+            <button type="submit" class="com-form-submit">Envoyer</button>
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<PartnersBanner background="linear-gradient(126deg, #F25934 48%, #DE252B 100%)" />
+
+<section class="com-intro-section">
+  <div class="com-intro-inner">
+
+    <!-- Left: Text + CTA -->
+    <div class="com-intro-text-col">
+      <h2 class="com-intro-title">Services de nettoyage conçus pour les professionnels</h2>
+      <div class="com-intro-desc">
+        <p>Nos services de nettoyage professionnels à Tanger sont pensés pour les entreprises et espaces de travail tels que les <strong>bureaux, centres d'affaires et open spaces</strong>, afin de garantir des lieux propres, agréables et propices à la productivité.</p>
+        <p>Nous intervenons également dans les <strong>écoles, hôpitaux, administrations, hôtels et chantiers</strong>, ainsi que lors d'événements, soirées, fêtes ou galas à Tanger, grâce à des équipes qualifiées qui assurent un nettoyage efficace avant, pendant et après chaque activité.</p>
+        <p>Enfin, nous proposons des prestations de <strong>nettoyage industriel</strong> pour les usines et sites situés en zones franches, avec un service adapté aux exigences de production et aux normes d'hygiène.</p>
+      </div>
+      <div class="com-intro-cta">
+        <a href="/contact" class="com-intro-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 512 512" fill="currentColor" aria-hidden="true">
+            <path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"/>
+          </svg>
+          <span>Réserver maintenant</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="com-intro-image-col">
+      <img
+        loading="lazy"
+        decoding="async"
+        width="1024"
+        height="957"
+        src="/images/nettoyage-professionnel-tanger-1024x957.jpg"
+        alt="Société de nettoyage commercial et professionnel à Tanger"
+      />
+    </div>
+
+  </div>
+</section>
+
+<section class="com-services-section" id="intro">
+  <div class="com-services-inner">
+
+    <!-- Top Row: text column + main video -->
+    <div class="com-services-top">
+
+      <!-- Left: heading, logo, description -->
+      <div class="com-services-text">
+        <h2 class="com-services-title">Société de nettoyage professionnel</h2>
+        <div class="com-services-logo">
+          <img
+            decoding="async"
+            width="1024"
+            height="292"
+            src="/images/ominta-commercial.jpg"
+            alt="logo ominta commercial"
+          />
+        </div>
+        <p class="com-services-desc">
+          Chez Ominta Commercial, nous faisons de vos espaces de travail des environnements impeccables, sûrs et sains,
+          adaptés à toutes les entreprises, quelle que soit leur taille ou leur secteur d'activité. Qu'il s'agisse de
+          <strong>bureaux, de chaînes de magasins, d'hôtels, d'usines, d'entrepôts</strong> ou d'institutions, nos
+          solutions de nettoyage sur mesure garantissent la continuité de vos activités tout en valorisant l'image de
+          votre organisation.
+        </p>
+      </div>
+
+      <!-- Right: main YouTube embed -->
+      <div class="com-services-video">
+        <div class="com-video-wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/HKyv1vGcyi4?controls=1&rel=0&playsinline=0&autoplay=0"
+            title="Ominta Commercial – Nettoyage professionnel à Tanger"
+            frameborder="0"
+            allowfullscreen
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            loading="lazy"
+          ></iframe> 
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Extra videos row -->
+    <div class="com-extra-videos">
+      <div class="com-video-col">
+        <div class="com-video-wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/qi6kQ8HBnz4?controls=1&rel=0&playsinline=0&autoplay=0"
+            title="Nettoyage industriel Tanger – Ominta Commercial"
+            frameborder="0"
+            allowfullscreen
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+      <div class="com-video-col">
+        <div class="com-video-wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/PHmdhxbmq4g?controls=1&rel=0&playsinline=0&autoplay=0"
+            title="Nettoyage de bureaux Tanger – Ominta Commercial"
+            frameborder="0"
+            allowfullscreen
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+ 
+    <!-- Bottom Row: 2 service cards -->
+    <div class="com-services-cards">
+
+      <!-- Card 1: Nettoyage Industriel -->
+      <div class="com-service-card">
+        <div class="com-card-image">
+          <img
+            loading="lazy"
+            decoding="async"
+            width="1050"
+            height="608"
+            src="/images/nettoyage-industriel-tanger.jpg"
+            alt="Nettoyage Industriel à Tanger"
+          />
+        </div>
+        <div class="com-card-body">
+          <h3 class="com-card-title">Nettoyage Industriel</h3>
+          <p>Nous intervenons dans toutes les zones industrielles de Tanger (Tanger Free Zone, TAC Gzenaya, Mgougha, Tanger Tec…) pour assurer le nettoyage professionnel de vos usines, entrepôts et sites de production avec efficacité et sécurité.</p>
+        </div>
+      </div>
+
+      <!-- Card 2: Nettoyage de bureaux -->
+      <div class="com-service-card">
+        <div class="com-card-image">
+          <img
+            loading="lazy"
+            decoding="async"
+            width="1050"
+            height="608"
+            src="/images/nettoyage-bureau-tanger.jpg"
+            alt="Nettoyage de bureaux à Tanger"
+          />
+        </div>
+        <div class="com-card-body">
+          <h3 class="com-card-title">Nettoyage de bureaux</h3>
+          <p>Service de nettoyage de bureaux à Tanger, zones franches, centres d'affaires et showrooms : entretien quotidien, sols et vitres, nettoyage des sanitaires, organisation des espaces, postes de travail et ordinateurs.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<WhyChooseSection imageSrc="/images/societe-nettoyage-evenements.jpg" />
+
+<AboutSection
+  title="Services de nettoyage pour bureaux, industries et commerces"
+  paragraphs={[
+    {
+      html: `À Tanger, nous proposons une gamme complète de services de nettoyage professionnel adaptés aux environnements commerciaux de tous secteurs. Nos équipes assurent l'entretien quotidien ou hebdomadaire de vos bureaux, incluant le nettoyage des postes de travail, des sols, des salles de réunion et des espaces communs.`,
+    },
+    {
+      html: `Pour les magasins, showrooms et espaces de vente, nous veillons à la propreté des rayons, présentoirs et zones ouvertes au public, garantissant une image irréprochable auprès de vos clients.`,
+    },
+    {
+      html: `Nous intervenons également dans les établissements éducatifs et administratifs afin d'offrir des environnements sûrs, propres et hygiéniques, aussi bien pour le personnel que pour les visiteurs. Dans le secteur industriel et logistique, nos prestations incluent le dépoussiérage des zones à forte accumulation, l'entretien des sols autour des machines ainsi que le nettoyage des aires de chargement et déchargement.`,
+    },
+    {
+      html: `Nos services couvrent aussi le nettoyage des vitres et <a href="https://fr.wikipedia.org/wiki/Vitre" target="_blank" rel="noopener">surfaces vitrées</a>, à l'intérieur comme à l'extérieur, pour une visibilité parfaite, ainsi que l'entretien des moquettes et tissus d'ameublement grâce à des traitements réguliers ou en profondeur.`,
+    },
+    {
+      html: `Après des travaux ou un aménagement, nous assurons le nettoyage de fin de chantier, incluant l'évacuation des débris, le dépoussiérage et la remise en état complète des lieux. Pour les événements, nous proposons des interventions avant, pendant et après afin de garantir des espaces toujours propres et accueillants.`,
+    },
+    {
+      html: `Enfin, nous mettons à votre disposition des solutions écologiques avec des produits <a href="https://www.onssa.gov.ma/" target="_blank" rel="noopener">certifiés ONSSA</a>, respectueux de l'environnement, de vos collaborateurs et de vos clients.`,
+    },
+    {
+      html: `Chaque prestation est pensée sur mesure, en tenant compte de vos horaires d'activité, du flux de passage dans vos locaux et de vos objectifs professionnels. Grâce à notre expertise, nous aidons les entreprises de Tanger à maintenir des environnements de travail sains, fonctionnels et représentatifs de leur image de marque.`,
+    },
+  ]}
+  mapSrc=""
+/>
+
+<TestimonialsSection />
+
+<FAQSection />
+
+</Layout>
+
+
+<style>
+
+  /* ── HERO ─────────────────────────────────────────── */
+  .com-hero {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: relative; 
+  }
+
+  /* Full-bleed background image on the right half */
+  .com-hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background-image: url("/images/societe-nettoyage-pro-tanger.jpg");
+    background-position: center left;
+    background-size: cover;
+    z-index: 0;
+  }
+
+  .com-hero-inner {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* LEFT */
+  .com-hero-left {
+    flex: 0 0 50%;
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .com-hero-content {
+    max-width: 610px;
+    padding: 100px 50px 100px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .com-logo {
+    margin-bottom: 24px;
+  }
+
+  .com-logo img {
+    width: 45%;
+    height: auto;
+    display: block;
+  }
+
+  .com-hero-title {
+    color: #000000;
+    font-family: "Poppins", sans-serif;
+    font-size: 55px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin: 0 0 20px 0;
+    letter-spacing: -0.025em;
+  }
+
+  .com-hero-desc {
+    color: #4B4848;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0 0 24px 0;
+  }
+
+  .com-hero-reviews {
+    text-align: left;
+    margin-bottom: 30px;
+  }
+
+  .com-hero-reviews img {
+    width: 48%;
+    height: auto;
+    filter: brightness(96%) contrast(112%) saturate(100%);
+    pointer-events: none;
+  }
+
+  .com-hero-cta {
+    display: flex;
+    gap: 42px;
+    margin-top: 30px;
+  }
+
+  .com-hero-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-image: linear-gradient(85deg, #F25934 35%, #DE252B 100%);
+    color: #ffffff;
+    padding: 17px 50px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: opacity 0.2s ease;
+  }
+
+  .com-hero-btn:hover {
+    opacity: 0.88;
+    color: #ffffff;
+  }
+
+  /* RIGHT */
+  .com-hero-right {
+    flex: 0 0 43%;
+    width: 43%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 0 80px 80px;
+  }
+
+  .com-hero-form-wrapper {
+    max-width: 540px;
+    width: 100%;
+  }
+
+  .com-hero-form-card {
+    background-image: linear-gradient(109deg, #F25934 32%, #DE252B 98%);
+    border-radius: 4px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .com-form-label-top {
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0 0 -15px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+
+  .com-form-sublabel {
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+    font-size: 17px;
+    margin: 0 0 8px 0;
+  }
+
+  .com-callback-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .com-callback-form input {
+    background-color: #ffffff;
+    border: none;
+    outline: none;
+    padding: 12px 14px;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.9rem;
+    color: #333;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .com-callback-form input::placeholder {
+    color: #888;
+  }
+
+  .com-form-submit {
+    background-color: #E4F1ED;
+    border: none;
+    color: #333;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    padding: 18px 0;
+    width: 100%;
+    cursor: pointer;
+    margin-top: 4px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  .com-form-submit:hover {
+    background-color: #DE252B;
+    color: #ffffff;
+  }
+
+  /* ── INTRO SECTION ────────────────────────────────── */
+  .com-intro-section {
+    padding-top: 120px;
+    padding-bottom: 0;
+    background-color: #ffffff;
+    overflow: hidden;
+  }
+
+  .com-intro-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .com-intro-text-col {
+    flex: 0 0 50%;
+    width: 50%;
+    padding-right: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .com-intro-title {
+    color: #000000;
+    font-family: "Poppins", sans-serif;
+    font-size: 46px;
+    font-weight: 700;
+    line-height: 1.15;
+    margin: 0 0 20px 0;
+  }
+
+  .com-intro-desc p {
+    color: #4B4848;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    margin: 0 0 14px 0;
+  }
+
+  .com-intro-desc p:last-child {
+    margin-bottom: 0;
+  }
+
+  .com-intro-desc a {
+    color: #F25934;
+  }
+
+  .com-intro-desc a:hover {
+    color: #DE252B;
+  }
+
+  .com-intro-cta {
+    margin-top: 30px;
+  }
+
+  .com-intro-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-image: linear-gradient(85deg, #F25934 35%, #DE252B 100%);
+    color: #ffffff;
+    padding: 17px 50px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: opacity 0.2s ease;
+  }
+
+  .com-intro-btn:hover {
+    opacity: 0.88;
+    color: #ffffff;
+  }
+
+  .com-intro-image-col {
+    flex: 0 0 50%;
+    width: 50%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  .com-intro-image-col img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+
+  /* ── SERVICES SECTION ─────────────────────────────── */
+  .com-services-section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    background-color: #ffffff;
+    overflow: hidden;
+  }
+
+  .com-services-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  /* Top Row (Title + main Video) */
+  .com-services-top {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+    padding-bottom: 30px;
+  }
+
+  .com-services-text {
+    flex: 0 0 45%;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .com-services-title {
+    color: #000000;
+    font-family: "Poppins", sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 0.9em;
+    margin: 0 0 20px 0;
+  }
+
+  .com-services-logo {
+    margin: 0 50px 0 0;
+    text-align: left;
+  }
+
+  .com-services-logo img {
+    width: 52%;
+    height: auto;
+    pointer-events: none;
+  }
+
+  .com-services-desc {
+    color: #4B4848;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-top: 10px;
+  }
+
+  .com-services-video {
+    flex: 0 0 52%;
+    width: 52%;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* Shared video wrapper (16:9) */
+  .com-video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+  }
+
+  .com-video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Extra 2-video row */
+  .com-extra-videos {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    padding-bottom: 30px;
+  }
+
+  .com-video-col {
+    flex: 1;
+    min-width: 0;
+  }
+
+  /* Bottom Row (Cards) */
+  .com-services-cards {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 30px;
+  }
+
+  .com-service-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border: 1px solid transparent;
+    transition: box-shadow 0.3s ease;
+  }
+
+  .com-card-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .com-card-body {
+    padding: 20px;
+  }
+
+  .com-card-title {
+    color: #000000;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin: 0 0 10px 0;
+  }
+
+  .com-card-body p {
+    color: #4B4848;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    margin: 0;
+  }
+
+  /* ── RESPONSIVE – tablet ≤ 1024px ────────────────── */
+  @media (max-width: 1024px) {
+    .com-hero-inner {
+      flex-direction: column;
+    }
+
+    .com-hero-left,
+    .com-hero-right {
+      flex: none;
+      width: 100%;
+    }
+
+    .com-hero-left {
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+    .com-hero-content {
+      max-width: 100%;
+      padding: 90px 10px;
+    }
+
+    .com-hero-reviews {
+      text-align: center;
+    }
+
+    .com-hero-cta {
+      justify-content: center;
+      align-items: center;
+    }
+
+    .com-hero-right {
+      padding: 10px 10px 10px 0;
+    }
+
+    .com-hero-form-wrapper {
+      max-width: 100%;
+      padding: 0 10px;
+    }
+
+    .com-hero-form-card {
+      padding: 50px 20px;
+      gap: 5px;
+    }
+
+    .com-form-label-top {
+      font-size: 28px;
+    }
+
+    .com-form-sublabel {
+      font-size: 15px;
+    }
+
+    .com-intro-section {
+      padding-top: 60px;
+    }
+
+    .com-intro-inner {
+      flex-direction: column;
+    }
+
+    .com-intro-text-col,
+    .com-intro-image-col {
+      flex: none;
+      width: 100%;
+    }
+
+    .com-intro-text-col {
+      padding-right: 0;
+      padding: 0 10px;
+      text-align: center;
+    }
+
+    .com-intro-title {
+      font-size: 38px;
+    }
+
+    .com-intro-cta {
+      display: flex;
+      justify-content: center;
+    }
+
+    .com-services-section {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+
+    .com-services-inner {
+      gap: 20px;
+    }
+
+    .com-services-top {
+      flex-direction: column;
+      padding-bottom: 0;
+      gap: 20px;
+    }
+
+    .com-services-text,
+    .com-services-video {
+      flex: none;
+      width: 100%;
+    }
+
+    .com-services-text {
+      padding: 0 20px;
+    }
+
+    .com-services-title {
+      font-size: 42px;
+    }
+
+    .com-services-logo {
+      margin: 10px 0;
+    }
+
+    .com-extra-videos {
+      flex-direction: column;
+      gap: 20px;
+      padding: 0 20px;
+    }
+
+    .com-services-cards {
+      gap: 20px;
+      padding: 0 20px;
+    }
+  }
+
+  /* ── RESPONSIVE – mobile ≤ 767px ─────────────────── */
+  @media (max-width: 767px) {
+    .com-hero-content {
+      padding: 40px 25px;
+    }
+
+    .com-hero-title {
+      font-size: 44px;
+      line-height: 1.1;
+    }
+
+    .com-logo img {
+      width: 59%;
+    }
+
+    .com-hero-reviews img {
+      width: 77%;
+    }
+
+    .com-hero-right {
+      min-height: 350px;
+      padding: 10px;
+    }
+
+    .com-hero-form-card {
+      padding: 50px 20px;
+      gap: 5px;
+    }
+
+    .com-form-label-top {
+      font-size: 20px;
+      line-height: 1.5;
+    }
+
+    .com-intro-text-col {
+      padding: 0 25px;
+      text-align: left;
+    }
+
+    .com-intro-title {
+      font-size: 34px;
+    }
+
+    .com-intro-cta {
+      justify-content: flex-start;
+    }
+
+    .com-services-cards {
+      flex-direction: column;
+    }
+
+    .com-services-title {
+      font-size: 36px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .com-hero-reviews img {
+      width: 48%;
+    }
+  }
+</style>
