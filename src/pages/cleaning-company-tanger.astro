@@ -1,0 +1,60 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import PartnersBanner from "../components/PartnersBanner.astro";
+import IntroSection from "../components/IntroSection.astro";
+import DomesticSection from "../components/DomesticSection.astro";
+import CommercialSection from "../components/CommercialSection.astro";
+import EventSection from "../components/EventSection.astro";
+import WhyChooseSection from "../components/WhyChooseSection.astro";
+import AboutSection from "../components/AboutSection.astro";
+import TestimonialsSection from "../components/TestimonialsSection.astro";
+import FAQSection from "../components/FAQSection.astro";
+---
+
+<Layout 
+	title="Cleaning Company Tanger | Professional Cleaning Services"
+	ctaTitle="Interested in our services?"
+	ctaBtnText="Book now"
+	footerDesc="Ominta Aus Maroc SARL, a cleaning company based in Tanger, offers premium domestic, commercial, industrial, and recreational cleaning services."
+	legalLinksProps={[
+		{ href: "#", label: "Terms and Conditions" },
+		{ href: "#", label: "Legal Notice" },
+		{ href: "#", label: "Privacy Policy" },
+		{ href: "/contact", label: "Contact" }
+	]}
+>
+	<Hero 
+		title="Cleaning Company Tanger"
+		desc="Ominta is the best cleaning company Tanger, providing professional cleaning services for both domestic clients and businesses across Tangier, Morocco."
+		ctaText="Book Now"
+		formLabelTop="Free & Immediate Call Back"
+		formSublabel="An advisor will call you in a few moments."
+		formNamePlaceholder="Full name *"
+		formPhonePlaceholder="Phone *"
+		formSubmit="Send"
+	/>
+	
+	<PartnersBanner />
+	
+	<IntroSection 
+		title="The Best Cleaning Company in Tanger"
+		paragraphs={[
+			`Ominta, a cleaning company in Tanger, puts its expertise at your service for all your cleaning needs, both at home and in your professional premises. With <a href="/ominta-domestic/"><strong>Ominta Domestic</strong></a>, we offer a reliable and thorough cleaning service for your house, apartment, or villa.`,
+			`At the same time, <a href="/ominta-commercial/"><strong>Ominta Commercial</strong></a> meets the needs of businesses and professionals in Tanger. We provide cleaning and maintenance for offices, hotels, showrooms, shops, and factories, delivering tailor-made solutions adapted to every sector.`,
+			`Call us now at (+212) 670-077-979 and entrust your cleaning needs to a specialized company that is available, attentive, and committed to meeting your expectations.`
+		]}
+		ctaText="Book Now"
+	/>
+	
+	<DomesticSection 
+		title="Home Cleaning Company in Tanger"
+		descHtml=`Ominta Domestic, specialized in home cleaning and providing <a href="/femme-de-menage-tanger/"><strong>housemaids in Tanger</strong></a>, transforms your interiors into healthy, pleasant, and welcoming spaces for you and your loved ones. Whether you live in an apartment, villa, or house, our cleaning services adapt to your lifestyle, schedule, and unique needs.`
+	/>
+	
+	<CommercialSection />
+	<WhyChooseSection />
+	<AboutSection />
+	<TestimonialsSection />
+	<FAQSection />
+</Layout>

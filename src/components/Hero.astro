@@ -1,4 +1,27 @@
 ---
+export interface Props {
+  title?: string;
+  desc?: string;
+  ctaText?: string;
+  formLabelTop?: string;
+  formSublabel?: string;
+  formNamePlaceholder?: string;
+  formPhonePlaceholder?: string;
+  formSubmit?: string;
+}
+
+const {
+  title = "Société de Nettoyage Tanger",
+  desc = `Ominta, votre société de nettoyage Tanger, proche de vous pour les services
+          <strong>à domicile</strong> (maisons, villas, appartements) et pour les
+          <strong>entreprises</strong> (bureaux, showrooms, usines, chantiers…).`,
+  ctaText = "Réserver maintenant",
+  formLabelTop = "RAPPEL GRATUIT ET IMMÉDIAT",
+  formSublabel = "Un conseiller vous appellera dans quelques instants.",
+  formNamePlaceholder = "Nom complet *",
+  formPhonePlaceholder = "Téléphone *",
+  formSubmit = "Envoyer"
+} = Astro.props;
 ---
 
 <section class="hero">
@@ -8,13 +31,9 @@
   <div class="hero-left">
     <div class="hero-content">
 
-      <h1 class="hero-title">Société de Nettoyage Tanger</h1>
+      <h1 class="hero-title">{title}</h1>
 
-      <p class="hero-desc">
-        Ominta, votre société de nettoyage Tanger, proche de vous pour les services
-        <strong>à domicile</strong> (maisons, villas, appartements) et pour les
-        <strong>entreprises</strong> (bureaux, showrooms, usines, chantiers…).
-      </p>
+      <p class="hero-desc" set:html={desc}></p>
 
       <div class="hero-reviews">
         <img
@@ -35,7 +54,7 @@
           <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 512 512" fill="currentColor" aria-hidden="true">
             <path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"/>
           </svg>
-          <span>Réserver maintenant</span>
+          <span>{ctaText}</span>
         </a>
       </div>
 
@@ -47,15 +66,15 @@
     <div class="hero-form-wrapper">
       <div class="hero-form-card"> 	
 
-        <p class="form-label-top">RAPPEL GRATUIT ET IMMÉDIAT</p>
-        <p class="form-sublabel">Un conseiller vous appellera dans quelques instants.</p>
+        <p class="form-label-top">{formLabelTop}</p>
+        <p class="form-sublabel">{formSublabel}</p>
 
         <form class="callback-form" action="#" method="post" novalidate>
           <input
             id="hero-name"
             type="text"
             name="your-name"
-            placeholder="Nom complet *"
+            placeholder={formNamePlaceholder}
             autocomplete="name"
             required
             maxlength="400"
@@ -64,12 +83,12 @@
             id="hero-phone"
             type="tel"
             name="phone-number"
-            placeholder="Téléphone *"
+            placeholder={formPhonePlaceholder}
             autocomplete="tel"
             required
             maxlength="400"
           />
-          <button type="submit" class="form-submit">Envoyer</button>
+          <button type="submit" class="form-submit">{formSubmit}</button>
         </form>
 
       </div>
@@ -149,7 +168,7 @@
   .hero-title {
     color: #000000;
     font-family: "Poppins", sans-serif;
-    font-size: 60px;
+    font-size: 55px;
     font-weight: 800;
     line-height: 1.1;
     margin: 0 0 20px 0;
@@ -238,9 +257,9 @@
   .form-label-top {
     color: #ffffff;
     font-family: "Poppins", sans-serif;
-    font-size: 1rem;
+    font-size: 1.3rem;
     font-weight: 600;
-    margin: 0 0 -15px 0;
+    margin: 0 0 15px 0;
     text-transform: uppercase;
     letter-spacing: 0.02em;
   }

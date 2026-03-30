@@ -1,4 +1,18 @@
 ---
+export interface Props {
+  title?: string;
+  descHtml?: string;
+}
+
+const {
+  title = "Société de nettoyage à domicile",
+  descHtml = `Ominta Domestic, spécialisée dans le nettoyage à domicile et la mise à disposition de
+            <strong><a href="/femme-de-menage-tanger/">femmes de ménage à Tanger</a></strong>,
+            transforme vos intérieurs en espaces sains, agréables et accueillants pour vous et
+            vos proches. Que vous viviez en <strong>appartement, en villa ou en maison</strong>,
+            nos services de ménage s'adaptent à votre mode de vie, à votre emploi du temps et à
+            vos besoins uniques.`
+} = Astro.props;
 ---
 
 <!-- ═══════════════════════════════════════════════════════
@@ -16,7 +30,7 @@
       <!-- Left: heading + logo + description (d630d29: 40% desktop) -->
       <div class="domestic-text">
 
-        <h2 class="domestic-title">Société de nettoyage à domicile</h2>
+        <h2 class="domestic-title">{title}</h2>
 
         <img
           loading="lazy"
@@ -35,14 +49,7 @@
         />
 
         <div class="domestic-desc">
-          <p>
-            Ominta Domestic, spécialisée dans le nettoyage à domicile et la mise à disposition de
-            <strong><a href="/femme-de-menage-tanger/">femmes de ménage à Tanger</a></strong>,
-            transforme vos intérieurs en espaces sains, agréables et accueillants pour vous et
-            vos proches. Que vous viviez en <strong>appartement, en villa ou en maison</strong>,
-            nos services de ménage s'adaptent à votre mode de vie, à votre emploi du temps et à
-            vos besoins uniques.
-          </p>
+          <p set:html={descHtml} />
         </div>
 
       </div>
@@ -196,12 +203,12 @@
     margin: 0;
   }
 
-  .domestic-desc a {
-    color: inherit;
+  .domestic-desc :global(a) {
+    color: #4B4848;
     font-weight: inherit;
   }
 
-  .domestic-desc a:hover {
+  .domestic-desc :global(a:hover) {
     color: #50A144;
   }
 

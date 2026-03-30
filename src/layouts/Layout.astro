@@ -4,9 +4,13 @@ import Footer from '../components/Footer.astro';
 
 interface Props {
 	title: string;
+	ctaTitle?: string;
+	ctaBtnText?: string;
+	footerDesc?: string;
+	legalLinksProps?: {href: string, label: string}[];
 }
 
-const { title } = Astro.props;
+const { title, ctaTitle, ctaBtnText, footerDesc, legalLinksProps } = Astro.props;
 ---
 
 <!doctype html>
@@ -26,7 +30,12 @@ const { title } = Astro.props;
 	<body>
 		<Header />
 		<slot />
-		<Footer />
+		<Footer 
+			ctaTitle={ctaTitle}
+			ctaBtnText={ctaBtnText}
+			footerDesc={footerDesc}
+			legalLinksProps={legalLinksProps}
+		/>
 	</body>
 </html>
 

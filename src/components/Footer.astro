@@ -3,22 +3,36 @@ const servicesLinks = [
   { href: "/ominta-domestic", label: "Ominta Domestic" },
   { href: "/ominta-commercial", label: "Ominta Commercial" },
   { href: "/femme-de-menage-tanger", label: "Femme de ménage" },
-  { href: "/cleaning-company-tangier", label: "Cleaning company" },
+  { href: "/cleaning-company-tanger", label: "Cleaning company" },
 ];
 
-const legalLinks = [
+export interface Props {
+  ctaTitle?: string;
+  ctaBtnText?: string;
+  footerDesc?: string;
+  legalLinksProps?: {href: string, label: string}[];
+}
+
+const defaultLegalLinks = [
   { href: "#", label: "Conditions générales" },
   { href: "#", label: "Mentions légales" },
   { href: "#", label: "Politique de confidentialité" },
   { href: "/contact", label: "Contact" },
 ];
+
+const {
+  ctaTitle = "Nos services vous intéressent ?",
+  ctaBtnText = "Réserver maintenant",
+  footerDesc = "Ominta Aus Maroc SARL, société de nettoyage basée à Tanger, propose des services de ménage et de nettoyage de première qualité pour les espaces domestiques, commerciaux, industriels et de loisirs.",
+  legalLinksProps = defaultLegalLinks
+} = Astro.props;
 ---
 <!-- ── CTA pre-footer banner ──────────────────────── -->
 <div class="cta-banner">
   <div class="cta-inner">
 
     <div class="cta-heading">
-      <h2 class="cta-title">Nos services vous intéressent ?</h2>
+      <h2 class="cta-title">{ctaTitle}</h2>
     </div>
 
     <div class="cta-actions">
@@ -29,7 +43,7 @@ const legalLinks = [
         +212 670 07 79 79
       </a>
       <a href="/contact" class="cta-btn cta-btn--reserve">
-        Réserver maintenant
+        {ctaBtnText}
         <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 320 512" fill="currentColor" aria-hidden="true">
           <path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"/>
         </svg>
@@ -59,9 +73,7 @@ const legalLinks = [
         </a>
 
         <p class="footer-desc">
-          Ominta Aus Maroc SARL, société de nettoyage basée à Tanger, propose des services
-          de ménage et de nettoyage de première qualité pour les espaces domestiques,
-          commerciaux, industriels et de loisirs.
+          {footerDesc}
         </p>
 
         <ul class="footer-social" aria-label="Réseaux sociaux">
@@ -97,7 +109,7 @@ const legalLinks = [
       <!-- Col 3: Legal links -->
       <nav class="footer-nav" aria-label="Informations légales">
         <ul class="footer-links">
-          {legalLinks.map(link => (
+          {legalLinksProps.map((link: { href: string; label: string }) => (
             <li>
               <a href={link.href} class="footer-link">{link.label}</a>
             </li>
