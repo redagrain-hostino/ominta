@@ -1,4 +1,8 @@
 ---
+export interface Props {
+  items?: { question: string; answerHtml: string }[];
+}
+const { items } = Astro.props;
 ---
 
 <!-- ═══════════════════════════════════════════════════════
@@ -18,7 +22,26 @@
     <!-- Right Column: Accordion -->
     <div class="faq-accordion-col"> 
       
-      <!-- FAQ Item 1 -->
+      {items ? (
+        items.map((item) => (
+          <div class="faq-card">
+            <button class="faq-question" aria-expanded="false">
+              <span>{item.question}</span>
+              <span class="faq-icon">
+                <svg class="icon-closed" xmlns="http://www.w3.org/2000/svg" width="14" height="22" viewBox="0 0 320 512" fill="currentColor"><path d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"></path></svg>
+                <svg class="icon-open" xmlns="http://www.w3.org/2000/svg" width="14" height="22" viewBox="0 0 320 512" fill="currentColor"><path d="M288.7 320H31.3c-17.8 0-26.7-21.5-14.1-34.1L145.9 157.2c7.8-7.8 20.5-7.8 28.3 0l128.6 128.7c12.6 12.6 3.7 34.1-14.1 34.1z"></path></svg>
+              </span>
+            </button>
+            <div class="faq-answer-wrapper">
+              <div class="faq-answer">
+                <div class="faq-answer-inner" set:html={item.answerHtml} />
+              </div>
+            </div>
+          </div>
+        ))
+      ) : (
+        <>
+          <!-- FAQ Item 1 -->
       <div class="faq-card">
         <button class="faq-question" aria-expanded="false">
           <span>Qu'est-ce qu'une société de nettoyage à Tanger ?</span>
@@ -127,6 +150,8 @@
           </div>
         </div>
       </div>
+      </>
+      )}
 
     </div>
 
@@ -140,14 +165,16 @@
 
     cards.forEach(card => {
       const button = card.querySelector('.faq-question');
-      
+      if (!button) return;
+
       button.addEventListener('click', () => {
         const isExpanded = button.getAttribute('aria-expanded') === 'true';
 
         // OPTIONAL: Close all other cards first (if you want an accordion that only allows one open at a time)
         cards.forEach(c => {
           c.classList.remove('is-open');
-          c.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+          const btn = c.querySelector('.faq-question');
+          if (btn) btn.setAttribute('aria-expanded', 'false');
         });
 
         // Toggle clicked card
@@ -160,7 +187,7 @@
   });
 </script>
 
-<style>
+<style is:global>
   /* ── Outer Section ──────────────────────────────────── */
   .faq-section {
     padding: 100px 0;
@@ -175,8 +202,7 @@
     display: flex;
     flex-direction: row;
     gap: 40px;
-align-items: center
-
+    align-items: center; 
   }
 
   /* ── Layout ─────────────────────────────────────────── */
@@ -300,7 +326,7 @@ align-items: center
   }
 
   .faq-answer-inner p {
-    color: #4B4848;
+    color: #244237;
     font-family: "Poppins", sans-serif;
     font-size: 16px;
     line-height: 1.7;
@@ -308,7 +334,7 @@ align-items: center
     opacity: 0;
     transform: translateY(-5px);
     transition: opacity 0.3s ease, transform 0.3s ease;
-  }
+  } 
 
   .faq-card.is-open .faq-answer-inner p {
     opacity: 1;
