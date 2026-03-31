@@ -260,7 +260,8 @@ const currentPath = Astro.url.pathname;
     .header-nav {
       position: fixed;
       top: 0;
-      right: -280px;
+      right: 0;
+      transform: translateX(100%);
       width: 280px;
       height: 100vh;
       background: #ffffff;
@@ -269,7 +270,7 @@ const currentPath = Astro.url.pathname;
       align-items: flex-start;
       padding: 80px 24px 24px;
       z-index: 999;
-      transition: right 0.3s ease;
+      transition: transform 0.3s ease;
       overflow-y: auto;
     }
 
@@ -298,7 +299,7 @@ const currentPath = Astro.url.pathname;
 
     /* When menu is open, slide nav into view */
     :global(body.menu-open) .header-nav {
-      right: 0;
+      transform: translateX(0);
     }
   }
 
